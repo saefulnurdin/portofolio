@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Glowing background elements -->
+  <circle cx="250" cy="250" r="210" fill="url(#bgGrad)" filter="url(#glow)"/>
+  <circle cx="250" cy="250" r="190" fill="none" stroke="url(#accentGrad)" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="250" cy="250" r="165" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+
+  <!-- Code/Tech Orbits -->
+  <g opacity="0.8">
+    <circle cx="100" cy="180" r="28" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+    <text x="100" y="186" fill="#06b6d4" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+    
+    <circle cx="400" cy="190" r="28" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="400" y="195" fill="#a78bfa" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">JS</text>
+    
+    <circle cx="360" cy="360" r="26" fill="#1e293b" stroke="#ec4899" stroke-width="2"/>
+    <text x="360" y="366" fill="#f472b6" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">API</text>
+
+    <circle cx="130" cy="350" r="26" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <text x="130" y="356" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">⚡</text>
+  </g>
+
+  <!-- Modern Avatar Illustration -->
+  <g transform="translate(140, 110)">
+    <!-- Hoodie/Body -->
+    <path d="M 20 250 C 20 180, 200 180, 200 250 Z" fill="#1e293b"/>
+    <path d="M 65 195 L 110 250 L 155 195 Z" fill="#334155"/>
+    <path d="M 90 200 L 110 250 L 130 200 Z" fill="#0f172a"/>
+    <circle cx="110" cy="205" r="4" fill="#06b6d4"/>
+
+    <!-- Head & Hair -->
+    <ellipse cx="110" cy="115" rx="55" ry="60" fill="url(#skinGrad)"/>
+    <path d="M 50 110 C 50 45, 170 45, 170 110 C 160 85, 140 70, 110 70 C 80 70, 60 90, 50 110 Z" fill="#1e1b4b"/>
+    
+    <!-- Glasses -->
+    <rect x="70" y="100" width="32" height="22" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="2.5"/>
+    <rect x="118" y="100" width="32" height="22" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="2.5"/>
+    <line x1="102" y1="110" x2="118" y2="110" stroke="#06b6d4" stroke-width="2.5"/>
+    
+    <!-- Eyes behind glasses -->
+    <circle cx="86" cy="111" r="3.5" fill="#38bdf8"/>
+    <circle cx="134" cy="111" r="3.5" fill="#38bdf8"/>
+    <circle cx="88" cy="109" r="1.5" fill="#ffffff"/>
+    <circle cx="136" cy="109" r="1.5" fill="#ffffff"/>
+
+    <!-- Smile -->
+    <path d="M 96 142 Q 110 154 124 142" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating Badge: Fullstack Dev -->
+  <g transform="translate(130, 400)">
+    <rect x="0" y="0" width="240" height="48" rx="24" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="28" cy="24" r="8" fill="#10b981"/>
+    <circle cx="28" cy="24" r="14" fill="#10b981" opacity="0.25"/>
+    <text x="50" y="30" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600">Full Stack Engineer</text>
+  </g>
+</svg>
