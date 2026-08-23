@@ -15,24 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_about: 'About',
       nav_contact: 'Contact',
 
-      hero_badge: 'Tersedia untuk Pekerjaan & Proyek Baru',
+      hero_badge: 'Tersedia untuk Pekerjaan & Projek Baru',
       hero_greeting: 'Halo, Saya',
       hero_name: 'Saeful Nurdin',
       hero_role_prefix: 'Saya seorang',
       hero_desc: 'Mahasiswa Teknik Informatika yang senang membangun berbagai hal dengan teknologi. Mengembangkan website, aplikasi desktop, dan perangkat berbasis mikrokontroler untuk menciptakan solusi yang bermanfaat.',
-      hero_cta_projects: 'Lihat Proyek',
+      hero_cta_projects: 'Lihat Projek',
       hero_cta_contact: 'Hubungi Saya',
       hero_scroll_down: 'Scroll ke Tentang Saya',
 
       about_tag: 'Tentang Saya',
       about_title: 'Membangun, Bereksperimen, dan Terus Berkembang',
-      about_desc: 'Saya adalah full-stack developer berpengalaman dengan passion dalam menciptakan aplikasi yang andal, efisien, dan memiliki estetika visual premium. Terbiasa memecahkan masalah arsitektur yang kompleks dari backend mikroservis hingga pengalaman antarmuka pengguna yang mulus.',
-      about_highlight_1: 'Arsitektur Clean Code & Best Practices Teruji',
-      about_highlight_2: 'Optimasi Performa Web & SEO 95+ Score',
-      about_highlight_3: 'Desain Responsif, Modern Glassmorphism & Aksesibilitas',
-
+      about_desc1: 'Saya merupakan mahasiswa Teknik Informatika yang memiliki ketertarikan dalam pengembangan perangkat lunak dan teknologi berbasis perangkat keras. Saya memiliki pengalaman mengerjakan berbagai Projek, mulai dari pengembangan website, aplikasi desktop, hingga pembuatan alat berbasis mikrokontroler.',
+      about_desc2: 'Melalui berbagai Projek tersebut, saya senang mempelajari bagaimana teknologi dapat digunakan untuk membangun solusi yang bermanfaat dan menyelesaikan permasalahan di kehidupan sehari-hari maupun kebutuhan industri. Saya terus mengembangkan kemampuan di bidang Web Development, Desktop Development, serta Embedded System dan Mikrokontroler.',
+    
       stat_exp: 'Tahun Pengalaman',
-      stat_projects: 'proyek Selesai',
+      stat_projects: 'Projek Selesai',
       stat_uptime: 'Kepuasan Klien',
       stat_tech: 'Teknologi Dikuasai',
 
@@ -43,30 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
       skills_tools: 'Tools & AI Ecosystem',
 
       projects_tag: 'Portofolio Showcase',
-      projects_title: 'Proyek & Karya',
-      projects_subtitle: 'Kumpulan proyek yang telah saya rancang dan kembangkan, mulai dari aplikasi web dan desktop hingga sistem embedded.',
+      projects_title: 'Projek & Karya',
+      projects_subtitle: 'Kumpulan Projek yang telah saya rancang dan kembangkan, mulai dari aplikasi web dan desktop hingga sistem embedded.',
 
-      filter_all: 'Semua proyek',
+      filter_all: 'Semua Projek',
       filter_web: 'Web',
       filter_desktop: 'Desktop',
       filter_embedded: 'Embedded',
 
-      btn_view_detail: 'Detail proyek',
+      btn_view_detail: 'Detail Projek',
       btn_live_demo: 'Live Demo',
       btn_source_code: 'Source Code',
       modal_features_title: 'Fitur Utama & Keunggulan',
       modal_tech_title: 'Teknologi yang Digunakan',
 
       contact_tag: 'Mari Berkolaborasi',
-      contact_title: 'Punya Ide proyek? Hubungi Saya',
-      contact_subtitle: 'Saya selalu terbuka untuk mendiskusikan peluang kerja, proyek kolaborasi, atau sekadar bertukar wawasan seputar teknologi.',
+      contact_title: 'Punya Ide Projek? Hubungi Saya',
+      contact_subtitle: 'Saya selalu terbuka untuk mendiskusikan peluang kerja, Projek kolaborasi, atau sekadar bertukar wawasan seputar teknologi.',
       contact_email_title: 'Kirim Email Langsung',
       contact_phone_title: 'WhatsApp / Telegram',
       contact_loc_title: 'Lokasi Kerja',
       contact_loc_val: 'Karawang, Indonesia (Bisa Remote)',
 
       form_subject: 'Topik / Subjek',
-      form_subject_placeholder: 'Diskusi Proyek / Penawaran Kerja',
+      form_subject_placeholder: 'Diskusi Projek / Penawaran Kerja',
       form_message: 'Pesan Anda',
       form_message_placeholder: 'Tuliskan detail ide atau pertanyaan Anda di sini...',
       form_send: 'Kirim Pesan',
@@ -93,10 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       about_tag: 'About Me',
       about_title: 'Build, Experiment, and Keep Growing',
-      about_desc: 'I am an experienced full-stack developer with a passion for building reliable, performant, and visually stunning applications. Adept at solving complex architectural challenges from microservices to seamless front-end design.',
-      about_highlight_1: 'Clean Code Architecture & Proven Best Practices',
-      about_highlight_2: 'Web Performance Optimization & 95+ SEO Score',
-      about_highlight_3: 'Fully Responsive, Glassmorphic & Accessible UI',
+      about_desc1: 'I am an Informatics Engineering student with a strong interest in software development and hardware-based technologies. I have experience working on various projects, ranging from website development and desktop applications to building microcontroller-based devices.',
+      about_desc2: 'Through these projects, I enjoy learning how technology can be used to build useful solutions and solve problems in everyday life as well as meet industry needs. I continuously develop my skills in Web Development, Desktop Development, Embedded Systems, and Microcontrollers.',
 
       stat_exp: 'Years Experience',
       stat_projects: 'Completed Projects',
@@ -826,46 +822,23 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      10. CONTACT FORM HANDLER & TOAST NOTIFICATION
      ========================================================================== */
-  const contactForm = document.getElementById('contact-form');
-  const toastAlert = document.getElementById('toast-alert');
-  const toastMessage = document.getElementById('toast-message');
 
-  function showToast(msg) {
-    if (!toastAlert || !toastMessage) return;
-    toastMessage.textContent = msg;
-    toastAlert.classList.add('show');
-    setTimeout(() => {
-      toastAlert.classList.remove('show');
-    }, 4500);
-  }
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      const subject = document.getElementById('form-subject').value.trim();
-      const message = document.getElementById('form-message').value.trim();
+  const subject = document.getElementById("form-subject").value;
+  const message = document.getElementById("form-message").value;
 
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `
-        <svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="12"></circle>
-        </svg>
-        ${translations[currentLang].form_sending}
-      `;
+  const email = "saefulnurdin20@gmail.com";
 
-      const emailBody = `${message}`;
-      const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=saefulnurdin20@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-      window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer');
+  const mailto =
+    "mailto:" + email +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(message);
 
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        showToast(translations[currentLang].toast_success);
-      }, 500);
-    });
-  }
+  window.location.href = mailto;
+});
+
 
   // Back to Top Click
   const backToTopBtn = document.getElementById('back-to-top');
